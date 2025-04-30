@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px 0;
+  text-align: center;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+.logo-container {
+  height: 70px; /* Reduzido para tornar o header mais compacto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  height: auto;
+  max-height: 300px; /* Aumentado para que a logo apareça maior */
+  object-fit: contain;
+}
+
+
+.parallax-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  right: -10%;
+  bottom: -20%;
+  background-image: url("../imagens/VideoCapture_20250430-075403.jpg");
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-image: url("../imagens/VideoCapture_20250430-075314.jpg");
+  }
+}
+
+.title {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title h1 {
+  margin: 0 0 20px 0;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stylized-list {
+  font-size: 1.2em;
+  color: #f4f4f4;
+}
+
+.kings-regular {
+  font-family: "Kings", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.countdown {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #ff0202;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
