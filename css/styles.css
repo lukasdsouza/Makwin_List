@@ -65,7 +65,7 @@ header {
   border-radius: 15px;
   backdrop-filter: blur(5px);
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 20px; /* garante espaçamento lateral em telas pequenas */
 }
 
 .title h1 {
@@ -91,4 +91,17 @@ header {
   color: #ff0202;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 1.8em; /* Título menor */
+  }
+
+  .countdown {
+    font-size: 1.4em; /* Contagem menor */
+  }
+
+  .stylized-list {
+    font-size: 1em; /* A palavra "List" também menor */
+  }
 }
