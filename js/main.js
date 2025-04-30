@@ -15,30 +15,22 @@ document.addEventListener('mousemove', (e) => {
 // Countdown timer
 const countdown = document.getElementById('countdown');
 const targetDate = new Date();
-targetDate.setDate(targetDate.getDate() + 60); // 60 dias a partir de agora
+targetDate.setDate(targetDate.getDate() + 60);
 
 function updateCountdown() {
   const now = new Date();
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    countdown.textContent = '00d 00h 00m 00s';
+    countdown.textContent = "00d 00h 00m 00s";
     clearInterval(interval);
     return;
   }
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24))
-    .toString()
-    .padStart(2, '0');
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24)
-    .toString()
-    .padStart(2, '0');
-  const minutes = Math.floor((diff / (1000 * 60)) % 60)
-    .toString()
-    .padStart(2, '0');
-  const seconds = Math.floor((diff / 1000) % 60)
-    .toString()
-    .padStart(2, '0');
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24).toString().padStart(2, '0');
+  const minutes = Math.floor((diff / (1000 * 60)) % 60).toString().padStart(2, '0');
+  const seconds = Math.floor((diff / 1000) % 60).toString().padStart(2, '0');
 
   countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }

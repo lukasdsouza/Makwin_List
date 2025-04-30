@@ -10,26 +10,45 @@ header {
   position: fixed;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 5px 0;
+  padding: 4px 0; /* menor altura */
   text-align: center;
   z-index: 10;
   backdrop-filter: blur(5px);
 }
 
 .logo-container {
-  height: 70px; /* Reduzido para tornar o header mais compacto */
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 
-.logo-container img {
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  transform: scale(0.9); /* aumenta visualmente */
+  transform-origin: center;
+}
+
+.logo-wrapper img {
   height: auto;
-  max-height: 300px; /* Aumentado para que a logo apareça maior */
+  max-height: 120px;
+  width: auto;
   object-fit: contain;
 }
 
+.angled-list {
+  position: absolute;
+  top: 70%;
+  right: 15px;
+  transform: translateY(-50%) rotate(-20deg);
+  font-size: 1.6em; /* levemente maior */
+  color: rgb(255, 255, 255);
+  font-weight: normal;
+  pointer-events: none;
+}
 
+/* Conteúdo principal */
 .parallax-container {
   position: relative;
   height: 100vh;
@@ -45,17 +64,11 @@ header {
   left: -10%;
   right: -10%;
   bottom: -20%;
-  background-image: url("../public/VideoCapture_20250430-075403.jpg");
+  background-image: url("https://i.imgur.com/wQJ9GUS.jpeg"); /* desktop */
   background-size: cover;
   background-position: center;
   will-change: transform;
   z-index: -1;
-}
-
-@media (max-width: 768px) {
-  .parallax-bg {
-    background-image: url("../public/VideoCapture_20250430-075314.jpg");
-  }
 }
 
 .title {
@@ -65,7 +78,7 @@ header {
   border-radius: 15px;
   backdrop-filter: blur(5px);
   max-width: 600px;
-  margin: 0 20px; /* garante espaçamento lateral em telas pequenas */
+  margin: 0 auto;
 }
 
 .title h1 {
@@ -79,29 +92,39 @@ header {
   color: #f4f4f4;
 }
 
+.countdown {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #ff0000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
 .kings-regular {
   font-family: "Kings", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-.countdown {
-  font-size: 2.2em;
-  font-weight: bold;
-  color: #ff0202;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: 2px;
-}
+/* Mobile */
 @media (max-width: 768px) {
+  .parallax-bg {
+    background-image: url("https://i.imgur.com/0riMaq1.jpeg"); /* mobile */
+  }
+
   .title h1 {
-    font-size: 1.8em; /* Título menor */
+    font-size: 1.8em;
   }
 
   .countdown {
-    font-size: 1.4em; /* Contagem menor */
+    font-size: 1.4em;
   }
 
   .stylized-list {
-    font-size: 1em; /* A palavra "List" também menor */
+    font-size: 1em;
+  }
+
+  .title {
+    margin: 0 30px;
   }
 }
