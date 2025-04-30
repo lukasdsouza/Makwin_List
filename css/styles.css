@@ -45,7 +45,7 @@ header {
   left: -10%;
   right: -10%;
   bottom: -20%;
-  background-image: url("../imagens/VideoCapture_20250430-075403.jpg");
+  background-image: url("../public/VideoCapture_20250430-075403.jpg");
   background-size: cover;
   background-position: center;
   will-change: transform;
@@ -54,7 +54,7 @@ header {
 
 @media (max-width: 768px) {
   .parallax-bg {
-    background-image: url("../imagens/VideoCapture_20250430-075314.jpg");
+    background-image: url("../public/VideoCapture_20250430-075314.jpg");
   }
 }
 
