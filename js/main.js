@@ -12,10 +12,9 @@ document.addEventListener('mousemove', (e) => {
   parallaxBg.style.transform = `translate(${moveX}px, ${moveY}px)`;
 });
 
-// Countdown timer
+// Countdown timer to July 5, 2025, at 1:00 PM
 const countdown = document.getElementById('countdown');
-const targetDate = new Date();
-targetDate.setDate(targetDate.getDate() + 60);
+const targetDate = new Date('July 5, 2025 13:00:00');
 
 function updateCountdown() {
   const now = new Date();
